@@ -45,6 +45,10 @@ body {
 	background-size: cover;
 }
 
+#jabs-title {
+	
+}
+
 nav {
 	display: inline-block;
 	position: relative;
@@ -59,6 +63,40 @@ nav {
 #user-icon {
 	width: 30px;
 	height: 30px;
+}
+
+.drop-btn {
+	border: none;
+	background-color: #fff;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.drop-content > a {
+	display: block;
+	color: #6fa8dc;
+	padding: 8px;
+	background-color: #e6e6e6;
+}
+
+.drop-content a:first-of-type {
+	border-bottom: solid 1px #6fa8dc;
+}
+
+.drop-content {
+	display: none;
+	position: absolute;
+	min-width: 135px;
+	border: solid 1px #6fa8dc;
+	border-radius: 2px; 
+	right: 0;
+}
+
+.dropdown:hover .drop-content {
+	display: block;
 }
 
 @media only screen and (min-width:600px) {
@@ -95,21 +133,23 @@ nav {
 <body>
 	<div id="wrapper">
 		<header id="banner-img">
-			<p id="jabs-title">JABS Floral Street Surgery</p>
+			<h1 id="jabs-title">JABS Floral Street Surgery</h1>
 			<a id="banner-click" href="#"></a>
 		</header>
 
 		<nav>
 			<ul id="social-user">
-				<ul id="">
-					<img id="user-icon" src="images/user.png">
-					<li>My Appointments</li>
-					<li>My Account</li>
-				</ul>
 				<a href="#"><img class="social-icon" src="images/Twitter.png"></a>
 				<a href="#"><img class="social-icon" src="images/Twitter.png"></a>
 				<a href="#"><img class="social-icon" src="images/Twitter.png"></a>
 				<a href="#"><img class="social-icon" src="images/Twitter.png"></a>
+				<div class="dropdown">
+					<a class="drop-btn"><img id="user-icon" src="images/user.png"></a>
+					<div class="drop-content">
+						<a>My Appointments</a>
+						<a>My Account</a>
+					</div>
+				</div>
 			</ul>
 		</nav>
 	</div>
